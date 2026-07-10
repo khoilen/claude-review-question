@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skilljar Practice Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar" aria-label="Quiz overview">
+        <div>
+          <p class="eyebrow">Practice Skilljar Exam</p>
+          <h1>Skilljar Practice Quiz</h1>
+        </div>
+        <div class="scoreboard" aria-live="polite">
+          <div>
+            <span id="answeredCount">0</span>
+            <small>Đã trả lời</small>
+          </div>
+          <div>
+            <span id="scoreCount">0</span>
+            <small>Đúng</small>
+          </div>
+          <div>
+            <span id="totalCount">0</span>
+            <small>Tổng câu</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Quiz controls">
+        <div class="segmented" role="group" aria-label="Chế độ làm bài">
+          <button class="segment active" type="button" data-mode="practice">Luyện tập</button>
+          <button class="segment" type="button" data-mode="review">Ôn câu sai</button>
+          <button class="segment" type="button" data-mode="all">Tất cả</button>
+        </div>
+        <div class="actions">
+          <label class="toggle">
+            <input id="instantFeedback" type="checkbox" checked>
+            <span>Chấm ngay</span>
+          </label>
+          <button id="shuffleBtn" class="ghost" type="button">Đảo câu</button>
+          <button id="resetBtn" class="danger" type="button">Làm lại</button>
+        </div>
+      </section>
+
+      <section class="progress-wrap" aria-label="Progress">
+        <div class="progress">
+          <span id="progressBar"></span>
+        </div>
+      </section>
+
+      <section id="quiz" class="quiz" aria-live="polite"></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
